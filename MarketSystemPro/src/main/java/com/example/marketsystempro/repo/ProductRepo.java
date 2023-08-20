@@ -1,7 +1,7 @@
 package com.example.marketsystempro.repo;
 
-import com.company.marketsystem.models.Product;
-import com.company.marketsystem.models.ProductCategory;
+import com.example.marketsystempro.models.Product;
+import com.example.marketsystempro.models.ProductCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

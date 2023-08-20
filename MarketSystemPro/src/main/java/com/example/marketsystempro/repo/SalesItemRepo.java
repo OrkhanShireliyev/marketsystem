@@ -1,6 +1,6 @@
 package com.example.marketsystempro.repo;
 
-import com.company.marketsystem.models.SalesItem;
+import com.example.marketsystempro.models.SalesItem;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
