@@ -1,9 +1,9 @@
 package com.example.marketsystempro.service;
 
-import com.company.marketsystem.dto.ProductDto;
-import com.company.marketsystem.models.Product;
-import com.company.marketsystem.models.ProductCategory;
-import com.company.marketsystem.repo.ProductRepo;
+import com.example.marketsystempro.dto.ProductDto;
+import com.example.marketsystempro.models.Product;
+import com.example.marketsystempro.models.ProductCategory;
+import com.example.marketsystempro.repo.ProductRepo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
