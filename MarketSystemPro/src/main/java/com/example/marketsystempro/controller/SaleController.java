@@ -1,5 +1,6 @@
 package com.example.marketsystempro.controller;
 
+import com.example.marketsystempro.dto.SalesItemDto;
 import com.example.marketsystempro.models.Sale;
 import com.example.marketsystempro.models.SalesItem;
 import com.example.marketsystempro.service.SalesService;
@@ -28,8 +29,10 @@ public class SaleController {
     }
 
     @PutMapping("/update//{salesPrice}/{salesItems}/{salesDate}/{salesNumber}")
-    public Sale updateSale(@PathVariable(value = "salesPrice") BigDecimal salesPrice, @PathVariable(value = "salesItems") List<SalesItem> salesItems,
-                           @PathVariable(value = "salesDate") LocalDateTime salesDate, @PathVariable(value = "salesNumber") String salesNumber) {
+    public Sale updateSale(@PathVariable(value = "salesPrice") BigDecimal salesPrice,
+                           @PathVariable(value = "salesItems") List<SalesItem> salesItems,
+                           @PathVariable(value = "salesDate") LocalDateTime salesDate,
+                           @PathVariable(value = "salesNumber") String salesNumber) {
         Sale sale = salesService.updateSales(salesPrice, salesItems, salesDate, salesNumber);
         return sale;
     }
@@ -39,12 +42,6 @@ public class SaleController {
         Sale sale = salesService.deleteSales(salesNumber);
         return sale;
     }
-
-//    @PostConstruct
-//    public void init() {
-//        List<Sale> sales = salesService.getInOneDaySales(LocalDate.of(2023,06,14));
-//        sales.stream().forEach(System.out::println);
-//    }
 
     @GetMapping("/{year}/{month}/{day}")
     public List<Sale> getInOneDaySales(@PathVariable String year, @PathVariable String month, @PathVariable String day) {
